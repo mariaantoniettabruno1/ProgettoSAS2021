@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>42</x>
+      <y>28</y>
+      <w>959</w>
+      <h>609</h>
+    </coordinates>
+    <panel_attributes>ManageTurn
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>70</y>
+      <w>238</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>TurnCalendar
+--
++createTurn(Date:data,place: String,
+timeSlot: &lt;Integer,Integer&gt;, deadline: data,
+Recurrence: boolean, avaiability:boolean,
+serviceTurn:boolean)
++deleteTurn(t)
++editTurn(Date:data,place: String,
+timeSlot: &lt;Integer,Integer&gt;, deadline: data,
+Recurrence: boolean, avaiability:boolean,
+serviceTurn:boolean )
++createTurnBlock(Arraylist&lt;turn&gt; t)
++deleteBlockTurn(BlockTurn: b)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>245</y>
+      <w>35</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+ v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>448</y>
+      <w>210</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>Turn 
+--
+idTurn : int
+-date : data
+-place :String
+-timeSlot : Pair&lt;Integer,Integer&gt;
+-deadline: data
+-Recurrence: boolean
+-avaiability: boolean
+-turnBlocked: boolean
+-serviceTurn : boolean
+--
++create(Date:data,place: String,
+     timeSlot: &lt;Integer,Integer&gt;, deadline: data,
+     Recurrence: boolean, avaiability:boolean,
+     serviceTurn:boolean )
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>70</y>
+      <w>448</w>
+      <h>287</h>
+    </coordinates>
+    <panel_attributes>TurnManager
+--
+* EventSendler Method*
++addReceiver(er: TurnEventReceiver)
++removeReceiver(er: TurnEventReceiver)
+-notifyTurnAdded(Turn : t)
+-notifyTurnRemoved(Turn : t)
+-notifyTurnEdited(Turn : t)
+-notifyBlockTurnCreated(TurnBlock: b)
+-notifyBlockTurnDeleted(TurnBlock: b)
+
+--
+*Operation Method*
++addTurn(Date:data,place: String,timeSlot: &lt;Integer,Integer&gt;, deadline: data,Recurrence: boolean, 
+                                                                                            avaiability:boolean,serviceTurn: boolean )
++deleteTurn(t) 
++editTurn(Date:data,place: String,timeSlot: &lt;Integer,Integer&gt;, deadline: data,Recurrence: boolean, 
+                                                                                             avaiability:boolean,serviceTurn:boolean )
++createTurnBlock(Arraylist&lt;turn&gt; t)
++deleteBlockTurn(BlockTurn: b)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>581</x>
+      <y>455</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>TurnBlock
+--
+idBlock: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>469</y>
+      <w>84</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+Associates</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>511</x>
+      <y>154</y>
+      <w>245</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+currentTurnCalendar
+m2=0..1</panel_attributes>
+    <additional_attributes>330.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>399</y>
+      <w>504</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>TurnEventReceiver
+{interface}
+--
+
+
+--
+
+/+updateTurnAdded(t,turnMan.currentTurn)/
+/+updateTurnDeleted(t,turnMan.currentTurn)/
+/+updateTurnEdited(t,turnMan.currentTurn)/
+/+updateBlockTurnCreated(TurnBlock: b)/
+/+updateBlockTurnDeleted(TurnBlock: b)/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>343</y>
+      <w>91</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=0..1
+
+
+EventReceivers</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1078</x>
+      <y>343</y>
+      <w>189</w>
+      <h>301</h>
+    </coordinates>
+    <panel_attributes>ManageUser
+fg=gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1106</x>
+      <y>385</y>
+      <w>105</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>User
+--
+isOrganizer() : boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1148</x>
+      <y>441</y>
+      <w>70</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1
+currentUser</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1099</x>
+      <y>546</y>
+      <w>147</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>UserManager
+--
+
+--
++getCurrentUser(): User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>959</x>
+      <y>154</y>
+      <w>161</w>
+      <h>287</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+scheduled by
+m2=1</panel_attributes>
+    <additional_attributes>210.0;390.0;110.0;390.0;110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>581</x>
+      <y>539</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Coppia
+--
+task : task
+user : User
+--
++create()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>553</y>
+      <w>84</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+partOf</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>672</y>
+      <w>126</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>UseCaseLogicException
+--
+fg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>672</y>
+      <w>126</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Exception
+--
+
+fg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>700</y>
+      <w>154</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=light_gray</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>49</x>
+      <y>651</y>
+      <w>497</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>General Moduel
+fg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

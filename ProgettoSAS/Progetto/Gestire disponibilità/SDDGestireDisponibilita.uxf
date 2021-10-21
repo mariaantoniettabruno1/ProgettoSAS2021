@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>288</x>
+      <y>0</y>
+      <w>72</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>Attore </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>120</y>
+      <w>36</w>
+      <h>972</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=10</panel_attributes>
+    <additional_attributes>10.0;790.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>120</y>
+      <w>36</w>
+      <h>972</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=10</panel_attributes>
+    <additional_attributes>10.0;790.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>792</x>
+      <y>60</y>
+      <w>132</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Sistema</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>264</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+1. apriDocumentoTurni()</panel_attributes>
+    <additional_attributes>460.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>312</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+Fornisce documento dei turni
+layer=2</panel_attributes>
+    <additional_attributes>10.0;20.0;460.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>228</x>
+      <y>192</y>
+      <w>720</w>
+      <h>804</h>
+    </coordinates>
+    <panel_attributes>LOOP
+fg=blue
+bg=#8CB4FF</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>408</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+2. assegnaDisponibilita(turno,disponibilita)
+layer=8</panel_attributes>
+    <additional_attributes>460.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>288</x>
+      <y>384</y>
+      <w>612</w>
+      <h>576</h>
+    </coordinates>
+    <panel_attributes>ALT
+fg=#761C8C
+bg=#e7bfff
+lw=2
+--
+
+
+
+
+
+
+
+
+
+-.
+layer=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>720</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+Aggiorna documento turni
+layer=10</panel_attributes>
+    <additional_attributes>10.0;20.0;460.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>768</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+2b.a. Error,data per modificare la disponibilita superata 
+fg=red
+layer=10</panel_attributes>
+    <additional_attributes>10.0;20.0;460.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>852</x>
+      <y>780</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=termination
+fg=red
+lw=2
+layer=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>648</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+2b. eliminaDisponibilita(turno)
+fg=#9E1C8C
+layer=8</panel_attributes>
+    <additional_attributes>460.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>792</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+2b.a Error,data per modificare la disponibilita superata 
+fg=red
+layer=10</panel_attributes>
+    <additional_attributes>10.0;20.0;460.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>852</x>
+      <y>804</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=termination
+fg=red
+lw=2
+layer=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>816</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+2c.a Error,la disponibilità deve essere eliminata per l’intero blocco  
+fg=red
+layer=10</panel_attributes>
+    <additional_attributes>10.0;20.0;460.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>852</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+2d.a Error,la disponibilità deve essere modificata per l’intero blocco  
+fg=red
+layer=10</panel_attributes>
+    <additional_attributes>10.0;20.0;460.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>852</x>
+      <y>828</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=termination
+fg=red
+lw=2
+layer=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>852</x>
+      <y>864</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=termination
+fg=red
+lw=2
+layer=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>300</x>
+      <y>708</y>
+      <w>576</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>ALT
+bg=#ffaaaa
+fg=#D3001B
+layer=9
+--
+
+-.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>480</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+Aggiorna documento turni
+layer=10</panel_attributes>
+    <additional_attributes>10.0;20.0;460.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>528</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+2. Error,data per modificare la disponibilita superata 
+fg=red
+layer=10</panel_attributes>
+    <additional_attributes>10.0;20.0;460.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>852</x>
+      <y>540</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=termination
+fg=red
+lw=2
+layer=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>300</x>
+      <y>456</y>
+      <w>576</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>ALT
+bg=#ffaaaa
+fg=#D3001B
+layer=9
+--
+
+
+-.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>612</y>
+      <w>576</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+2a. modificaDisponibilita(turno,disponibilita)
+fg=#9E1C8C
+layer=8</panel_attributes>
+    <additional_attributes>460.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>112</x>
+      <y>128</y>
+      <w>584</w>
+      <h>464</h>
+    </coordinates>
+    <panel_attributes>Manage Availability</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>160</y>
+      <w>288</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>availability Manager
+--
+*event sender method*
++addReceiver(AvaialbilityReceiver:AR)
++deleteReceiver(AvailabilityReceiver:AR)
++notifyAssignAvailability(Turn : t)
++notifyAssignAvailabilityTurns(ArrayList&lt;turn&gt; : tt)
++notifyDeleteAvailability(Turn : t)
++notifyDeleteAvailabilityTurns(ArrayList&lt;turn&gt; : tt)
+--
+*operation method*
++assignAvailability(turn : t)
++assignAvailabilityTurns(ArrayList : tt)
++deleteAvailability(turn : t)
++deleteAvailabilityTurns(Arraylist : tt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>712</x>
+      <y>128</y>
+      <w>568</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>ManageTurn
+fg=dark_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>264</y>
+      <w>176</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Turn
+--
+-assignment : Coppia&lt;Task,User&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>152</y>
+      <w>176</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>TurnManager
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>152</y>
+      <w>136</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>TurnCalendar
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>896</x>
+      <y>216</y>
+      <w>216</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+ v</panel_attributes>
+    <additional_attributes>230.0;10.0;230.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>896</x>
+      <y>176</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+
+</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>200</y>
+      <w>344</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+turn avaiilability</panel_attributes>
+    <additional_attributes>410.0;130.0;250.0;130.0;250.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>304</y>
+      <w>360</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+currentUser</panel_attributes>
+    <additional_attributes>430.0;220.0;220.0;220.0;220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>128</x>
+      <y>424</y>
+      <w>272</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>AvailabilityReceiver
+	{interface}
+--
+/+updateAssignAvailability(Turn : t)/
+/+updateAssignAvailabilityTurns(ArrayList&lt;turn&gt; : tt)/
+/+updateDeleteAvailability(Turn : t)/
+/+updateDeleteAvailabilityTurns(ArrayList&lt;turn&gt; : tt)/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>256</x>
+      <y>336</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>712</x>
+      <y>400</y>
+      <w>216</w>
+      <h>344</h>
+    </coordinates>
+    <panel_attributes>ManageUser
+fg=gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>448</y>
+      <w>136</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>User
+--
+isKitchenStuff() : boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>792</x>
+      <y>512</y>
+      <w>80</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1
+currentUser</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>632</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>UserManager
+--
+
+--
++getCurrentUser(): User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>632</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>UseCaseLogicException
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>632</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Exception
+--
+
+fg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>656</y>
+      <w>184</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>96</x>
+      <y>600</y>
+      <w>568</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>General Module
+fg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
